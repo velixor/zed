@@ -24,10 +24,20 @@
       "U": "editor::Redo"
     }
   },
+  // Subword
   {
     "context": "Editor && vim_mode == visual",
     "bindings": {
       "S": "vim::PushAddSurrounds"
+    }
+  },
+  {
+    "context": "(Editor && (vim_mode == normal || vim_mode == visual)) || (VimControl && !menu)",
+    "bindings": {
+      "[ w": "vim::NextSubwordStart",
+      "] w": "vim::NextSubwordEnd",
+      "[ b": "vim::PreviousSubwordStart",
+      "] b": "vim::PreviousSubwordEnd"
     }
   }
 ]
