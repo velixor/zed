@@ -7,15 +7,27 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
+      "H": ["workspace::SendKeystrokes", "^"]
     }
   },
   {
-    "context": "Editor",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
+      "L": ["workspace::SendKeystrokes", "$"]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "U": "editor::Redo"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "S": "vim::PushAddSurrounds"
     }
   }
 ]
